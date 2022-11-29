@@ -1,0 +1,51 @@
+﻿@page "/Todo"
+
+
+<h3>Todo(@todos.Count(Todo => !Todo.IsDone))</h3>
+
+<ul>
+    @foreach (var Todo in todos)
+    {
+        <li>
+            <input type="checkbox" @bind="Todo.IsDone" />
+            <input @bind="Todo.Title" />
+            <input @bind="Todo.DueDate" />
+        </li>
+        
+    }
+
+</ul>
+
+
+
+<input @bind="newTodo" @bind:event="oninput" placeholder="Something Todo" />
+<input @bind="Due_Date" placeholder="Due Date" />
+<button @onclick="AddTodo">Add</button>
+
+@if (!string.IsNullOrWhiteSpace(newTodo))
+{
+    <p>@newTodo Due: @Due_Date?.ToShortDateString()</p>
+}
+
+
+@code {
+    private List<TodoItem> todos = new();
+
+    private string newTodo = string.Empty;
+
+    private DateTime? Due_Date = null;
+
+    private Boolean? IsDone = false;
+
+    private void AddTodo()
+    {
+        if (string.IsNullOrWhiteSpace(newTodo))
+        {
+
+            todos.Add(new TodoItem { Title = newTodo });
+
+
+        }
+        newTodo = string.Empty;
+    }
+}

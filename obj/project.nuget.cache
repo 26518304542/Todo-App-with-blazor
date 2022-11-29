@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "n/TyqeY+5JmahZ6GdtZvV0C9Uc90n/9yKQyeVr7l2nqrdif1okotLVSGyzWNmkgbw6WgfPneZe2wSUxvyPeI8w==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\ÖZGÜR IŞIK ÇİMEN\\Source\\Repos\\Blazorapp\\Blazorapp.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\ÖZGÜR IŞIK ÇİMEN\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.11.1\\microsoft.visualstudio.azure.containers.tools.targets.1.11.1.nupkg.sha512"
+  ],
+  "logs": []
+}
